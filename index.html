@@ -223,16 +223,14 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3" id="privacy-auditing">Auditing machine unlearning with Min-K% Prob</h2>
+        <h2 class="title is-3" id="privacy-auditing">Progressive Decoding</h2>
         <div class="content has-text-justified">
           <p>
-            <strong>Machine Unlearning</strong><br>
-            <a href="https://www.microsoft.com/en-us/research/project/physics-of-agi/articles/whos-harry-potter-making-llms-forget-2/"> Recent work from MSR </a> shows how LLMs can unlearn copyrighted training data via strategic fine-tuning.
-            They made Llama2-7B-chat unlearn the entire Harry Potter magical world and released it as
-            <a href="https://huggingface.co/microsoft/Llama2-7b-WhoIsHarryPotter">Llama2-7B-WhoIsHarryPotter</a> for
-            scrutiny.
-            But with our Min-K% Prob technique, we've found that some “magical traces” still remain, producing Harry
-            Potter content! 🧙‍♂️🔮
+            To enforce language models' decoding to follow constraints, much research has proposed constrained decoding methods.
+            However, classical constrained decoding methods usually require access to the token-wise probability distribution over the vocabulary, which is not provided by many black-box LLMs like ChatGPT.
+            In our work, we propose progressive decoding, which verifies and modifies the LLMs' output in the decoding stage.
+            We decode one reasoning step per iteration; verify it; and modify it in case to achieve effective knowledge editing.
+            It bypasses the requirement of accessing the output vocabulary distributions, since all the verifications and modifications are made on the output text instead of the token-wise distributions. 👋  
           </p>
           <p>
             <img src="./static/images/unlearn_full.png"
