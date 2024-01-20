@@ -228,7 +228,7 @@
           <p>
             To enforce language models' decoding to follow constraints, much research has proposed constrained decoding methods.
             However, classical constrained decoding methods usually require access to the token-wise probability distribution over the vocabulary, which is not provided by many black-box LLMs like ChatGPT.
-            In our work, we propose progressive decoding, which verifies and modifies the LLMs' output in the decoding stage.
+            In our work, we propose <strong>progressive decoding</strong><br>, which verifies and modifies the LLMs' output in the decoding stage.
             We decode one reasoning step per iteration; verify it; and modify it in case to achieve effective knowledge editing.
             It bypasses the requirement of accessing the output vocabulary distributions, since all the verifications and modifications are made on the output text instead of the token-wise distributions. 👋  
           </p>
