@@ -198,28 +198,19 @@
     <!-- Abstract -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Detection Method Min-K% Prob</h2>
+        <h2 class="title is-3">Designing Constraints for Better Knowledge Editing</h2>
         <div class="content has-text-justified">
           <p>
-            <strong>What is Min-K% Prob?</strong><br>
-            We propose a pretraining data detection method named Min-K% Prob. Our method is based on a simple
-            hypothesis: an unseen example tends to contain a few outlier words with low probabilities, whereas a seen
-            example is less likely to contain words with such low probabilities. MIN-K% Prob computes the average
-            probabilities of outlier tokens.
-          </p>
+            <strong>The central idea of this paper is to view knowledge editing as a problem of decoding with constraints.</strong><br>
+            We propose to impose semantic constraints on the LLMs' outputs to represent the desired properties that benefit knowledge editing.
+            Specifically, we propose the following constraints: <strong>Uniqueness</strong> <span>&#128205;</span> ensures the advancements of every reasoning step; <strong>Coherence</strong> <span>&#128062;</span>  guarantees the coherence of adjacent steps; <strong>Awareness</strong> <span>&#128161;</span> guarantees the LLMs' awareness of updated knowledge; <strong>Relevance</strong> <span>&#128588;</span> improves the relevance of reasoning to the input question.
+            Our idea is to directly control the LLMs' outputs to follow the above constraints, in order to improve the LLMs' reasoning with knowledge editing.   
+        </p>
 
-          <p>
-            <strong>How to use Min-K% Prob?</strong><br>
-            To check if a text was in LLM's pretraining:
-          <ol>
-            <li>Evaluate token probabilities in the text.</li>
-            <li>Pick the k% tokens with minimum probabilities.</li>
-            <li>Compute their average log likelihood.</li>
-          </ol>
-          If the average log likelihood is high, the text is likely in the pretraining data. ✅
-          </p>
+        <center><img src="./static/images/fig_10.png" alt="teaser" width="50%"></center>
+          
 
-<a href="https://arxiv.org/pdf/2310.16789.pdf" target="_blank">See more results in our paper</a>
+<a href="https://arxiv.org/pdf/2310.16789.pdf" target="_blank">See more details in our paper</a>
         </div>
       </div>
     </div>
