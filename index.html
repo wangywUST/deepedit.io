@@ -180,14 +180,9 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Although large language models (LLMs) are widely deployed, the data used to train them is rarely disclosed.
-            Given the
-            incredible scale of this data, up to trillions of tokens, it's nearly certain it includes potentially
-            problematic
-            text such as copyrighted materials, personally identifiable information, and test data for widely reported
-            reference
-            benchmarks. However, we currently lack knowledge on which data of these types is included or in what
-            proportions.
+            We develop a new perspective of knowledge editing for large language models (LLMs) as decoding with constraints. We propose DeepEdit (Depth-first Search based Progressive Decoding for Knowledge Editing), a neuro-symbolic method that improves knowledge editing with better coherence of reasoning, relevance to the question, and awareness of updated knowledge. DeepEdit can be flexibly applied to all black-box LLMs: it does not require any access to the model parameters, representations, or output vocabulary distributions. DeepEdit progressively produces the high-quality reasoning steps towards effective knowledge editing. It utilizes a depth-first search to revise the LLMs' output, which improves the output's informativeness to the input question and awareness of the updated knowledge. Qualitatively, DeepEdit effectively controls LLMs to produce more succinct reasoning in accord with knowledge editing. Quantitatively, DeepEdit yields significant gains on MQuaKE, a challenging multi-hop question-answering dataset with knowledge editing. We release the source code at <b><a href="https://github.com/wangywUST/DeepEdit"
+                target="_blank">
+                https://github.com/wangywUST/DeepEdit</a></b> <span>&#128214;</span>.
           </p>
 
            <li><b>Pretraining Ddata detection problem</b>. In this paper, we explore the pretraining data detection problem<span>&#x1F575;&#xFE0F;</span>: given a piece of
