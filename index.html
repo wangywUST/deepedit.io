@@ -184,39 +184,6 @@
                 target="_blank">
                 https://github.com/wangywUST/DeepEdit</a></b> <span>&#128214;</span>.
           </p>
-
-           <li><b>Pretraining Ddata detection problem</b>. In this paper, we explore the pretraining data detection problem<span>&#x1F575;&#xFE0F;</span>: given a piece of
-            text and
-            black-box access to an LLM without knowing the pretraining data, can we determine if the model was trained
-            on the
-            provided text? 
-            
-            <li><b>Dynamic benchmark WikiMIA</b>. To aid this study, we present <b><a href="https://huggingface.co/datasets/swj0419/WikiMIA"
-                target="_blank">
-                a dynamic benchmark WikiMIA</a></b> <span>&#128214;</span> that uses data created both before and
-            after model training
-            to support gold truth detection.
-
-          <li><b>Detection method Min-K% Prob</b>. We also design a new <b><a href="https://github.com/swj0419/detect-pretrain-code" target="_blank">detection
-                method Min-K%
-                Prob</a></b> <img src="static/images/min-k_icon.png" alt="Min-K Icon" style="width:25px; height:25px;">. This is built
-            on a straightforward
-            hypothesis: an unobserved example is more likely to have a few outlier words with low probabilities under
-            the LLM,
-            while a recognized example is less inclined to contain words with such reduced probabilities. Min-K% Prob
-            operates
-            without any insight into the pretraining corpus or any extra training, distinguishing it from past detection
-            strategies
-            that necessitate educating a reference model on data analogous to the pretraining data. Furthermore, our
-            tests indicate
-            that Min-K% Prob delivers a 7.4% enhancement on WikiMIA relative to these preceding techniques. 
-
-            <li><b>Real-life use cases</b>. We employ
-            Min-K% Prob in
-            three real-life contexts: <strong>benchmark example contamination detection</strong>,
-            <a href="#privacy-auditing"><strong>privacy auditing of machine unlearning</strong></a>,
-            and <a href="#copyrighted-detection"><strong>copyrighted text detection</strong></a> in language models' pretraining
-            data.
         </div>
       </div>
     </div>
