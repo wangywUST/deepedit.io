@@ -236,12 +236,26 @@
             <img src="./static/images/fig_9.png"
               alt="Graph depicting the process of unlearning Harry Potter content">
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="privacy-auditing">Local Verifier and Modifier</h2>
+        <div class="content has-text-justified">
           <p>
-            <strong> Auditing machine unlearning with Min-K% Prob </strong> <br>
-            The unlearned model LLaMA2-7B-WhoIsHarryPotter answers the questions related to Harry
-              Potter correctly. We manually cross-checked these responses against the Harry Potter book series
-            for verification.<br>
-            <img src="./static/images/unlearn_result.png" alt="Results showing the unlearned model's responses">
+            We store the candidates that satisfy the local verifier ⚖ in a stack for further use. 
+            Instead of simply retaining only one candidate, we store all the candidates in the stack 📚, since we have the global verifier that has to verify the reasoning steps from the whole reasoning process.
+            The correctness of a reasoning step has to be finally decided by the global verifier. 
+          </p>
+          <p>
+            <img src="./static/images/fig_15.png"
+              alt="Graph depicting the process of unlearning Harry Potter content">
           </p>
         </div>
       </div>
@@ -257,7 +271,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <!-- <h2 class="title is-3" id="copyrighted-detection">Copyrighted Book Detection</h2> -->
-        <h2 class="title is-3" id="copyrighted-detection">Detecting Copyrighted Books in LLMs with Min-K% Prob</h2>
+        <h2 class="title is-3" id="copyrighted-detection">Local Verifier and Modifier</h2>
         <div class="content has-text-justified">
 
         <!-- <title>Top 20 Copyrighted Books in GPT-3's (text-davinci-003) Pretraining Data detected by Min-K% Prob</title> -->
