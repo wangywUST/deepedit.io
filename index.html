@@ -161,10 +161,6 @@
 </b>
       <!-- <center><img src="./static/images/frame.gif" alt="teaser"></center> -->
       <center><img src="./static/images/fig_11.png" alt="teaser" width="100%"></center>
-
-  We propose a new perspective of knowledge editing (KE) for large language models (LLMs) that treats it as a constrained decoding problem. We design decoding constraints to regulate LLMs, <b>ensuring coherence between reasoning steps when incorporating new knowledge</b>. To enforce these constraints, we utilize a <b>depth-first search to adaptively substitute new knowledge for the LLMs' original reasoning steps</b>, greedily seeking the optimal path of multi-hop reasoning with new knowledge. From this vantage, <b>we propose DEEPEDIT: Depth-first Search-based Decoding for Knowledge Editing</b>. DEEPEDIT improves the KE of LLMs by enhancing the <b>conciseness, coherence, pertinence, and receptiveness</b> of reasoning with new knowledge. DEEPEDIT is flexibly <b>applicable to any black-box LLM</b> without requiring access to model parameters or token-wise distributions. In addition to DEEPEDIT, we propose <b>two new KE benchmarks: MQuAKE-2002 and MQuAKE-hard</b>, which are designed to provide <b>more precise and challenging assessments</b> of KE approaches. Qualitatively, DEEPEDIT enables LLMs to produce more succinct reasoning outputs in accordance with new knowledge. Quantitatively, it yields significant improvements on multiple KE benchmarks.
-      
-      <center><img src="./static/images/fig_17.png" alt="teaser" width="50%"></center>
       
       </div>
     </div>
@@ -179,9 +175,9 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We develop a new perspective of knowledge editing for large language models (LLMs) as decoding with constraints. We propose DeepEdit <img src="static/images/min-k_icon.png" alt="Min-K Icon" style="width:25px; height:25px;"> (Depth-first Search based Progressive Decoding for Knowledge Editing), a neuro-symbolic method that improves knowledge editing with better coherence of reasoning, relevance to the question, and awareness of updated knowledge. DeepEdit can be flexibly applied to all black-box LLMs: it does not require any access to the model parameters, representations, or output vocabulary distributions. DeepEdit progressively produces the high-quality reasoning steps towards effective knowledge editing. It utilizes a depth-first search to revise the LLMs' output, which improves the output's informativeness to the input question and awareness of the updated knowledge. Qualitatively, DeepEdit effectively controls LLMs to produce more succinct reasoning in accord with knowledge editing. Quantitatively, DeepEdit yields significant gains on MQuaKE, a challenging multi-hop question-answering dataset with knowledge editing. We release the source code at <b><a href="https://github.com/wangywUST/DeepEdit"
-                target="_blank">
-                https://github.com/wangywUST/DeepEdit</a></b> <span>&#128220;</span>.
+          We propose a new perspective of knowledge editing (KE) for large language models (LLMs) that treats it as a constrained decoding problem. We design decoding constraints to regulate LLMs, <b>ensuring coherence between reasoning steps when incorporating new knowledge</b>. To enforce these constraints, we utilize a <b>depth-first search to adaptively substitute new knowledge for the LLMs' original reasoning steps</b>, greedily seeking the optimal path of multi-hop reasoning with new knowledge. From this vantage, <b>we propose DEEPEDIT: Depth-first Search-based Decoding for Knowledge Editing</b>. DEEPEDIT improves the KE of LLMs by enhancing the <b>conciseness, coherence, pertinence, and receptiveness</b> of reasoning with new knowledge. DEEPEDIT is flexibly <b>applicable to any black-box LLM</b> without requiring access to model parameters or token-wise distributions. In addition to DEEPEDIT, we propose <b>two new KE benchmarks: MQuAKE-2002 and MQuAKE-hard</b>, which are designed to provide <b>more precise and challenging assessments</b> of KE approaches. Qualitatively, DEEPEDIT enables LLMs to produce more succinct reasoning outputs in accordance with new knowledge. Quantitatively, it yields significant improvements on multiple KE benchmarks.
+              
+              <center><img src="./static/images/fig_17.png" alt="teaser" width="50%"></center>
           </p>
 
         </div>
