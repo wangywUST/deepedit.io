@@ -242,7 +242,7 @@
       <body>
 
         <table>
-          <caption><b style="color: red;">: Data statistics of different benchmarks. # Conflicted Instances represent the number of instances of which the ground-truth labels are affected by the new knowledge from other instances. An example is shown in the above Figure. </caption>
+          <caption><b style="color: red;">Data statistics of different benchmarks. # Conflicted Instances represent the number of instances of which the ground-truth labels are affected by the new knowledge from other instances. An example is shown in the above Figure. </caption>
           <thead> <tr> <th><strong>Benchmark</strong></th> <th># Instances</th> <th># Hops per Instance</th> <th># Edited Facts per Instance</th> <th># Conflicted Instances</th> </tr> </thead> <tbody> <tr> <td>MQuAKE-3k [Zhong et al., 2023]</td> <td>3,000</td> <td>3.0</td> <td>2.0</td> <td>998</td> </tr> <tr> <td>MQuAKE-2002 (Ours)</td> <td>2,002</td> <td>2.7</td> <td>2.2</td> <td>0</td> </tr> <tr> <td>MQuAKE-hard (Ours)</td> <td>429</td> <td>4.0</td> <td>4.0</td> <td>0</td> </tr> </tbody> 
         </table>
 
@@ -391,7 +391,7 @@
       <body>
 
         <table>
-          <caption><b style="color: red;">Experimental results (accuracy; %) on the dataset MQuAKE-3k. </caption>
+          <caption><b style="color: red;">Experimental results (accuracy; %) on the dataset MQuAKE-3k with the KE batch size of 100. </caption>
           <thead>
             <tr>
               <th>Method</th>
@@ -401,19 +401,19 @@
           <tbody>
             <tr>
               <td>text-davinci-003 w/ MeLLo </td>
-              <td>43.6</td>
+              <td>32.2</td>
             </tr>
             <tr>
               <td>text-davinci-003 w/ <strong>DEEPEDIT (Ours)</strong></td>
-              <td><strong>62.1</strong></td>
+              <td><strong>49.1</strong></td>
             </tr>
             <tr>
               <td>gpt-3.5-turbo-instruct w/ MeLLo </td>
-              <td>35.8</td>
+              <td>29.9</td>
             </tr>
             <tr>
               <td>gpt-3.5-turbo-instruct w/ <strong>DEEPEDIT (Ours)</strong></td>
-              <td><strong>61.0</strong></td>
+              <td><strong>47.2</strong></td>
             </tr>
           </tbody>
         </table>
