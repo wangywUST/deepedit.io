@@ -225,12 +225,18 @@
 
             Taking the single generated step and the new facts as the step candidates, we filter a valid candidate and take it as the new reasoning step. Note that there may exist more than one candidates that satisfy the constraints. We will introduce how we design the decoding constraints for KE in Section 3.2, how we verify the constraints in Section 3.3 and Section 3.4, and how we process the multiple valid step candidates to search for the optimal path of LLMs' multi-hop reasoning in Section 3.5. 
 
-            Our decoding design bypasses the requirement of accessing the token-wise distributions, since all the decoding actions are defined over the step level. Our decoding strategy is free to be applied to black-box LLMs in order to produce satisfactory outputs in accordance with new knowledge.
+            <b>Our decoding design bypasses the requirement of accessing the token-wise distributions, since all the decoding actions are defined over the step level. Our decoding strategy is free to be applied to black-box LLMs in order to produce satisfactory outputs in accordance with new knowledge.</b>
           </p>
           <p>
             <img src="./static/images/fig_18.png"
               alt="Graph depicting the process of unlearning Harry Potter content">
           </p>
+
+          <p>
+            <img src="./static/images/fig_20.png"
+              alt="Graph depicting the process of unlearning Harry Potter content">
+          </p>
+
         </div>
       </div>
     </div>
