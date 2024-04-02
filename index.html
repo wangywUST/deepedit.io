@@ -187,6 +187,36 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">New Benchmarks for Knowledge Editing</h2>
+        <div class="content has-text-justified">
+          <p>
+          We provide two new benchmarks for the evaluation of KE methods: MQuAKE-2002 and MQuAKE-hard. Both are built from the MQuAKE (Zhong et al., 2023), a recent KE benchmark that is designed to evaluate the KE methods on helping LLMs to answer multi-hop questions given new knowledge. Every instance in MQuAKE includes a multi-hop question and one to four related edited facts, every of which can alter the ground-truth answer to the question. Zhong et al. (2023) suggests using a randomly sampled 3,000 instance subset of MQuAKE to do the evaluation, which reduces the experimental costs. This evaluation benchmark is termed as MQuAKE-3k.
+        </p>
+
+
+
+          <strong> Annotation Mistakes in One-Third Instances of MQuAKE-3k.</strong><br>
+          We propose to impose semantic constraints on the LLMs' outputs to represent the desired properties that benefit knowledge editing.
+          Specifically, we propose the following constraints: <strong>Conciseness</strong> <span>&#128205;</span> prevents the redundant loops of reasoning; <strong>Coherence</strong> <span>&#128062;</span>  guarantees the coherence of adjacent steps; <strong>Receptiveness</strong> <span>&#128161;</span> guarantees the LLMs' awareness of new knowledge; <strong>Pertinence</strong> <span>&#128588;</span> improves the relevance of reasoning to the input question.
+          These constraints improve LLMs’ reasoning with new knowledge from different perspectives as a whole.
+        </p>
+
+        <center><img src="./static/images/fig_10.png" alt="teaser" width="100%"></center>
+          
+
+<a href="https://arxiv.org/abs/2401.10471" target="_blank">See more details in our paper</a>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+  </div>
+</section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -222,9 +252,13 @@
         <div class="content has-text-justified">
           <p>
             In this work, we change the granularity of decoding from the token level to the reasoning step level. Our decoding is designed at the step level: instead of taking the tokens predefined in a fixed vocabulary as the candidates, we take the reasoning steps as the candidates. At every iteration, we let LLMs to produce one reasoning step and retrieve a fixed number of new facts in parallel to the reasoning step as the step candidates. The new fact retrieval is based on the nearest neighbor search with the sentence-level embeddings given by BERT. The motivation of this design is that the new facts that are semantically close to the generated facts are more likely to satisfy the constraints. 
+          </p>
 
+          <p>
             Taking the single generated step and the new facts as the step candidates, we filter a valid candidate and take it as the new reasoning step. Note that there may exist more than one candidates that satisfy the constraints. We will introduce how we design the decoding constraints for KE in Section 3.2, how we verify the constraints in Section 3.3 and Section 3.4, and how we process the multiple valid step candidates to search for the optimal path of LLMs' multi-hop reasoning in Section 3.5. 
+          </p>
 
+          <p>
             <b>Our decoding design bypasses the requirement of accessing the token-wise distributions, since all the decoding actions are defined over the step level. Our decoding strategy is free to be applied to black-box LLMs in order to produce satisfactory outputs in accordance with new knowledge.</b>
           </p>
           <p>
