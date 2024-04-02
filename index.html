@@ -203,8 +203,50 @@
           There are two issues of using MQuAKE-3k to evaluate KE methods. The first issue is that the new knowledge from different instances MQuAKE-3k can cause conflicts and mistakes to the ground-truth answers. In other words, <b>the ground-truth answer from instance A can be altered by the new knowledge from another instance B.</b> We show an example of knowledge conflicts in MQuAKE-3k in the below Figure. These knowledge conflicts will make the ground-truth answers incorrect given the new knowledge that are conflicted with the answers because the inference on every instance would retrieve the new knowledge from all instances. <b>We observe that 998 instances' ground-truth answers are broken by the new knowledge from other instances.</b>❗
         </p>
 
-        <center><img src="./static/images/fig_21.png" alt="teaser" width="50%"></center>
+        <center><img src="./static/images/fig_21.png" alt="teaser" width="80%"></center>
           
+        <p>
+          <strong> New Benchmark MQuAKE-2002 for More Precise Evaluation.</strong><br>
+          To address the issue of annotation mistakes in MQuAKE-3k, we provide a new subset of MQuAKE-3k, which does not have any knowledge conflict across instances. This subset includes 2,002 instances, so we term it as MQuAKE-2002. <b>We filter out the instances of which the ground-truth answers are broken by the new knowledge from other instances to produce MQuAKE-2002</b>. Compared with MQuAKE-3k, our MQuAKE-2002 provides a more precise evaluation for knowledge editing methods, since it removes the annotation mistakes due to knowledge conflicts across instances. The data statistics of MQuAKE-2002 are provided in the below Table.  
+        </p>
+
+        <p>
+          <strong> New Benchmark MQuAKE-hard for More Challenging Evaluation.</strong><br>
+          The second issue of MQuAKE-3k is that more than 66% instances in MQuAKE-3k only contain at most two edited facts that influence the answers, which are not challenging enough to evaluate the knowledge editing methods on handling multiple edited facts that can alter the ground-truth reasons. We construct a more challenging subset of MQuAKE by selecting the instances that contain the highest number of edited facts per instance. We term this challenging set as MQuAKE-hard, which includes 429 instances and every instance contains four edited facts. MQuAKE-hard has no overlap with MQuAKE-3k. <b>We term this challenging set as MQuAKE-hard, which includes 429 instances and every instance contains four edited facts.</b> MQuAKE-hard has no overlap with MQuAKE-3k. The data statistics of MQuAKE-hard are also provided in the below Table.
+        </p>
+
+        <style>
+          table {
+            width: 100%;
+            border-collapse: collapse;
+          }
+
+          table,
+          th,
+          td {
+            border: 1px solid black;
+          }
+
+          th,
+          td {
+            padding: 8px;
+            text-align: left;
+          }
+
+          th {
+            background-color: #f2f2f2;
+          }
+        </style>
+      </head>
+
+      <body>
+
+        <table>
+          <caption><b style="color: red;">: Data statistics of different benchmarks. # Conflicted Instances represent the number of instances of which the ground-truth labels are affected by the new knowledge from other instances. An example is shown in the above Figure. </caption>
+          <thead> <tr> <th><strong>Benchmark</strong></th> <th># Instances</th> <th># Hops per Instance</th> <th># Edited Facts per Instance</th> <th># Conflicted Instances</th> </tr> </thead> <tbody> <tr> <td>MQuAKE-3k [Zhong et al., 2023]</td> <td>3,000</td> <td>3.0</td> <td>2.0</td> <td>998</td> </tr> <tr> <td>MQuAKE-2002</td> <td>2,002</td> <td>2.7</td> <td>2.2</td> <td>0</td> </tr> <tr> <td>MQuAKE-hard</td> <td>429</td> <td>4.0</td> <td>4.0</td> <td>0</td> </tr> </tbody> 
+        </table>
+
+      </body>
 
 <a href="https://arxiv.org/abs/2401.10471" target="_blank">See more details in our paper</a>
         </div>
@@ -378,7 +420,6 @@
 
       </body>
 
-      </html>
 
           <p>
             <img src="./static/images/fig_19.png"
@@ -389,6 +430,8 @@
             <img src="./static/images/fig_20.png"
               alt="Graph depicting the process of unlearning Harry Potter content">
           </p>
+
+      </html>
 
     </div>
   </div>
