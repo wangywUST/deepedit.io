@@ -241,7 +241,7 @@
    We propose <b>DeepEdit</b> ✍, a new knowledge editing method that can be applied to all black-box large language models (LLMs) without retraining. 
   DeepEdit conducts knowledge editing by applying the semantic constraints to the decoding of LLMs. Two examples of the LLMs' text generation with our DeepEdit and the baseline method MeLLo are shown below.
               
-      <center><img src="./static/images/fig_11.png" alt="teaser" width="100%"></center>
+      <center><img src="./static/images/fig_1.jpg" alt="teaser" width="100%"></center>
           </p>
 
         </div>
@@ -329,15 +329,20 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3" id="privacy-auditing">Local Constraint Verifier</h2>
+        <h2 class="title is-3" id="privacy-auditing">Depth-first Search with Early Stopping</h2>
         <div class="content has-text-justified">
           <p>
-            We store the candidates that satisfy the local verifier ⚖ in a stack for further use. 
-            Instead of simply retaining only one candidate, we store all the candidates in the stack 📚, since we have the global verifier that has to verify the reasoning steps from the whole reasoning process.
-            The correctness of a reasoning step has to be finally decided by the global verifier. 
+          When producing every reasoning step, DeepEdit searches through the parametric and new knowledge to find the knowledge items that satisfy our constraints, termed as valid step candidates.
+          Among the valid candidates, DeepEdit prioritizes more important ones as the new reasoning step for further reasoning.
+          We comprehensively evaluate the importance of different candidates based on their semantic relationships and the prior that the new knowledge is more informative to LLMs than the parametric knowledge.<br><br>
+
+        Note that the classical depth-first search has a backtracking mechanism that enables us to traverse all the reasoning chains of valid reasoning steps. 
+        However, such backtracking is undoubtedly time-consuming and unnecessary after an answer is found.
+        Therefore, we design an early-stopping mechanism to stop the depth-first search when an answer is found by LLMs. 
+        Such an early stopping significantly improves the reasoning efficiency by reducing redundant iterations, as validated by the qualitative analysis and empirical results.
           </p>
           <p>
-            <img src="./static/images/fig_15.png"
+            <img src="./static/images/fig_22.jpg"
               alt="Graph depicting the process of unlearning Harry Potter content">
           </p>
         </div>
@@ -345,28 +350,6 @@
     </div>
   </div>
 </section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3" id="privacy-auditing">Global Constraint Verifier</h2>
-        <div class="content has-text-justified">
-          <p>
-            The global verifier ⚖ determines the feasibility of the whole reasoning process by checking whether the answer is found.
-            If not feasible, we pop the status stack 📚 to use another reasoning subprocess that satisfies the local verifier. 
-          </p>
-          <p>
-            <img src="./static/images/fig_16.png"
-              alt="Graph depicting the process of unlearning Harry Potter content">
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 
 
 <section class="section">
