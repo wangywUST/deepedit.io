@@ -156,14 +156,14 @@
     <!-- Abstract -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">New Benchmarks for Knowledge Editing</h2>
+        <h2 class="title is-3">New Knowledge Editing Benchmarks to Resolve the Annotation Mistakes in MQuAKE</h2>
         <div class="content has-text-justified">
           <p>
-          We provide two new benchmarks for the evaluation of KE methods: <b>MQuAKE-2002 and MQuAKE-hard</b>🏁. Both are built based on the MQuAKE (Zhong et al., 2023), a recent KE dataset that is designed to evaluate the KE methods on helping LLMs to answer multi-hop questions given new knowledge. Every instance in MQuAKE includes a multi-hop question and one to four related edited facts, every of which can alter the ground-truth answer to the question. Zhong et al. (2023) suggests using a randomly sampled 3,000 instance subset of MQuAKE to do the evaluation, which reduces the experimental costs. This evaluation benchmark is termed as MQuAKE-3k.
+          We provide two new benchmarks for the evaluation of KE methods: <b>MQuAKE-2002 and MQuAKE-hard</b>🎯. Both are built based on the MQuAKE (Zhong et al., 2023), a recent KE dataset that is designed to evaluate the KE methods on helping LLMs to answer multi-hop questions given new knowledge. Zhong et al. (2023) suggests using a randomly sampled 3,000 instance subset of MQuAKE to do the evaluation, which reduces the experimental costs. This benchmark is termed as <b>MQuAKE-3k</b>.
         </p>
 
         <p>
-          <strong> Annotation Mistakes in One-Third Instances of MQuAKE-3k.</strong><br>
+          <strong> Annotation Mistakes in One-Third Instances of MQuAKE-3k❗</strong><br>
           There are two issues of using MQuAKE-3k to evaluate KE methods. The first issue is that the new knowledge from different instances MQuAKE-3k can cause conflicts and mistakes to the ground-truth answers. In other words, <b>the ground-truth answer from instance A can be altered by the new knowledge from another instance B.</b> We show an example of knowledge conflicts in MQuAKE-3k in the below Figure. These knowledge conflicts will make the ground-truth answers incorrect given the new knowledge that are conflicted with the answers because the inference on every instance would retrieve the new knowledge from all instances. <b>We observe that 998 instances' ground-truth answers are broken by the new knowledge from other instances.</b>❗
         </p>
 
